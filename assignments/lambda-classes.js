@@ -88,7 +88,8 @@ const projectManagers = new ProjectManagers({
     catchPhrase: 'Wood! I\'ve found you a seeker!',
     gradClassName: 'Quidditch 101',
     favInstructor: 'Madam Hooch',
-    channel: 'Wizards Press'
+    channel: 'Wizards Press',
+    subject: 'Wizardry'
 })
 
 
