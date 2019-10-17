@@ -32,7 +32,8 @@ class Student extends Person {
         super(attr);
         this.previousBackground = attr.previousBackground,
         this.className = attr.className,
-        this.favSubjects = attr.favSubjects
+        this.favSubjects = attr.favSubjects,
+        this.grade = attr.grade
     }
     listsSubjects(){
         return `${student.name}'s favourite subjects are ${this.favSubjects}`;
@@ -42,6 +43,9 @@ class Student extends Person {
     }
     sprintChallenge(){
         return `${student.name} has begun sprint challenge on ${this.favSubjects[0]}`;
+    }
+    subjectGrade(){
+        return `${student.name} receives a grade of ${this.grade} in ${this.favSubjects[1]}`;
     }
 }
 
@@ -76,7 +80,8 @@ const student = new Student({
     location: 'Gryffindor Common Room',
     previousBackground: 'nerd',
     className: 'Defense Against the Dark Arts',
-    favSubjects: ['Transfiguration', ' Herbology', ' Charms']
+    favSubjects: ['Transfiguration', ' Herbology', ' Charms'],
+    grade: '99.9%'
 })
 
 const projectManagers = new ProjectManagers({
@@ -98,5 +103,6 @@ console.log(instructor.grade());
 console.log(student.listsSubjects());
 console.log(student.PRAssignment());
 console.log(student.sprintChallenge());
+console.log(student.subjectGrade());
 console.log(projectManagers.standUp());
 console.log(projectManagers.debugsCode());
